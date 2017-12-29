@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use backend\models\Havadurumu;
+use backend\models\Emergency;
 
 /* @var $this yii\web\View */
 /* @var $model kouosl\emergency\models\Emergency */
