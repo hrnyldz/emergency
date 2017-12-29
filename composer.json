@@ -1,8 +1,8 @@
 {
     "name": "kouosl/emergency",
-    "description": "Yii2 KouOsl Content Module Integration",
+    "description": "Yii2 KouOsl Emergency Module Integration",
     "type": "yii2-extension",
-    "keywords": ["yii2", "yii 2", "samples", "content", "module", "modules"],
+    "keywords": ["yii2", "yii 2", "Emergency", "module", "modules"],
     "license": "BSD-3-Clause",
     "authors": [
         {
