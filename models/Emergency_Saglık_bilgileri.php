@@ -24,7 +24,7 @@ class Emergency extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'saglık_bilgileri';
+        return 'saglik_bilgileri';
     }
 
     /**
