@@ -35,7 +35,7 @@ class EmergencyController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new HavadurumuSearch();
+        $searchModel = new EmergencySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,19 +45,19 @@ class EmergencyController extends Controller
     }
 
     /**
-     * Displays a single Havadurumu model.
-     * @param integer $id
+     * Displays a single Emergency model.
+     * @param integer $TCKNO
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView($TCKNO)
     {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $this->findModel($TCKNO),
         ]);
     }
 
     /**
-     * Creates a new Havadurumu model.
+     * Creates a new Emergency model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
@@ -67,7 +67,7 @@ class EmergencyController extends Controller
 
 		
 		İf ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'TCKNO' => $model->TCKNO]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -78,15 +78,15 @@ class EmergencyController extends Controller
     /**
      * Updates an existing Emergency model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param integer $TCKNO
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($TCKNO)
     {
-        $model = $this->findModel($id);
+        $model = $this->findModel($TCKNO);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'TCKNO' => $model->TCKNO]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -97,12 +97,12 @@ class EmergencyController extends Controller
     /**
      * Deletes an existing Emergency model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param integer $TCKNO
      * @return mixed
      */
-    public function actionDelete($id)
+    public function actionDelete($TCKNO)
     {
-        $this->findModel($id)->delete();
+        $this->findModel($TCKNO)->delete();
 
         return $this->redirect(['index']);
     }
@@ -110,13 +110,13 @@ class EmergencyController extends Controller
     /**
      * Finds the Emergency model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
+     * @param integer $TCKNO
      * @return Emergency the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    protected function findModel($TCKNO)
     {
-        if (($model = Emergency::findOne($id)) !== null) {
+        if (($model = Emergency::findOne($TCKNO)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
