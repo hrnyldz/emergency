@@ -73,7 +73,7 @@ class Emergency extends \yii\db\ActiveRecord
             'anne_adi' => 'ANNE_ADI',
             'aile_sira_no' => 'AILE_SIRA_NO',
             'cilt_no' => 'CILT_NO',
-			'adres' => 'ADRES',
+	    'adres' => 'ADRES',
             'telefon' => 'TELEFON',
             'yakin_tel_1' => 'YAKIN_TEL_1',
             'yakin_durum_1' => 'YAKIN_DURUM_1',
