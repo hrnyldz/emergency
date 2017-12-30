@@ -5,7 +5,7 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use kouosl\emergency\models\Emergency;
 /**
- * EmergencySearch represents the model behind the search form about `kouosl\havadurumu1\models\Havadurumu`.
+ * EmergencySearch represents the model behind the search form about `kouosl\emergency\models\emergency`.
  */
 class EmergencySearch extends Emergency
 {
