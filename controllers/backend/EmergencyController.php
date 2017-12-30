@@ -4,7 +4,7 @@ namespace kouosl\emergency\controllers\backend;
 
 use Yii;
 use kouosl\emergency\models\emergency;
-use kouosl\emergency\models\emergencySearch;
+use kouosl\emergency\models\EmergencySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
